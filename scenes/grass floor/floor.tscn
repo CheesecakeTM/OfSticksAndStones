@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://djuxlbje8ukgj"]
+
+[ext_resource type="Material" uid="uid://244odeim35ru" path="res://assets/materials/Shaders/Toon/toon.tres" id="1_0fke2"]
+[ext_resource type="PackedScene" uid="uid://dvhlyth7m6q1f" path="res://scenes/grass floor/grass.tscn" id="2_sx6lg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1o5v"]
+material = ExtResource("1_0fke2")
+size = Vector3(10, 1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwp2b"]
+cull_mode = 1
+
+[node name="floor" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="floor_base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+layers = 3
+mesh = SubResource("BoxMesh_p1o5v")
+
+[node name="grass" parent="." instance=ExtResource("2_sx6lg")]
+transform = Transform3D(0.883533, 0, 0, 0, 0.420405, 0, 0, 0, 0.887766, 0.0489712, 0, -0.0734577)
+
+[node name="collision" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, -0.5, -2.38419e-07)
+layers = 3
+use_collision = true
+size = Vector3(9.8, 1, 9.8)
+material = SubResource("StandardMaterial3D_jwp2b")

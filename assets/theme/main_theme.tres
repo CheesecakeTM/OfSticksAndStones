@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://04j8gnnpynr"]
+
+[ext_resource type="StyleBox" uid="uid://dk0x0cwpfucqk" path="res://assets/theme/button_disabled.tres" id="1_1pb32"]
+[ext_resource type="StyleBox" uid="uid://dn3dsws4c05bv" path="res://assets/theme/button_hover.tres" id="1_cdooo"]
+[ext_resource type="FontFile" uid="uid://cu30c1ss443gi" path="res://assets/theme/pixel_rpg.ttf" id="1_tp4kx"]
+[ext_resource type="StyleBox" uid="uid://dgew40vu0emc4" path="res://assets/theme/button_normal.tres" id="2_srawa"]
+[ext_resource type="StyleBox" uid="uid://cev3l4k22v8ym" path="res://assets/theme/button_pressed.tres" id="3_goabe"]
+
+[resource]
+default_base_scale = 1.0
+default_font = ExtResource("1_tp4kx")
+default_font_size = 20
+Button/styles/disabled = ExtResource("1_1pb32")
+Button/styles/hover = ExtResource("1_cdooo")
+Button/styles/normal = ExtResource("2_srawa")
+Button/styles/pressed = ExtResource("3_goabe")

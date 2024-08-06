@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://4wodxith75ti"]
+
+[ext_resource type="Theme" uid="uid://04j8gnnpynr" path="res://assets/theme/main_theme.tres" id="1_s33xl"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="2_lo52r"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("1_s33xl")
+script = ExtResource("2_lo52r")
+
+[node name="main_menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -550.0
+offset_top = -420.0
+offset_right = 550.0
+offset_bottom = 420.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Label" type="Label" parent="main_menu"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.054902, 0.054902, 0.054902, 1)
+theme_override_colors/font_outline_color = Color(0.054902, 0.054902, 0.054902, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 70
+text = "Of sticks & Stones"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="main_menu"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_s33xl")
+theme_type_variation = &"buttons"
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="main_menu/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Play"
+
+[node name="OptionsButton" type="Button" parent="main_menu/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="main_menu/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 75)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+
+[connection signal="pressed" from="main_menu/VBoxContainer/PlayButton" to="." method="play"]
+[connection signal="pressed" from="main_menu/VBoxContainer/QuitButton" to="." method="quit"]

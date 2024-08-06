@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://244odeim35ru"]
+
+[ext_resource type="Shader" path="res://assets/materials/Shaders/Toon/cel.gdshader" id="2_b77pt"]
+
+[sub_resource type="Gradient" id="Gradient_qmond"]
+offsets = PackedFloat32Array(0.285199, 0.844765)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cpext"]
+gradient = SubResource("Gradient_qmond")
+
+[sub_resource type="Gradient" id="Gradient_e8sl1"]
+offsets = PackedFloat32Array(0.851986, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_i8xj1"]
+gradient = SubResource("Gradient_e8sl1")
+
+[resource]
+render_priority = 0
+shader = ExtResource("2_b77pt")
+shader_parameter/albedo = Color(0.290196, 0.407843, 0, 1)
+shader_parameter/color_gradient = SubResource("GradientTexture1D_cpext")
+shader_parameter/fresnel_gradient = SubResource("GradientTexture1D_i8xj1")

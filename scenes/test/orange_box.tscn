@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnaakbrxhgvyd"]
+
+[ext_resource type="Material" uid="uid://btai0dm4ukuyf" path="res://assets/materials/Grids/orange_grid_material.tres" id="1_us6b6"]
+
+[node name="orange_box" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material_override = ExtResource("1_us6b6")
+cast_shadow = 0
+use_collision = true
+collision_mask = 2
+size = Vector3(2, 0.5, 2)

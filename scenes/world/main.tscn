@@ -1,0 +1,228 @@
+[gd_scene load_steps=6 format=3 uid="uid://7m866fmm1ekn"]
+
+[ext_resource type="PackedScene" uid="uid://dtuee5wkweqye" path="res://scenes/player/player.tscn" id="1_7w07n"]
+[ext_resource type="Material" uid="uid://cmlb4cc5wh5jo" path="res://assets/skybox/sky_material.tres" id="2_7rqhb"]
+[ext_resource type="PackedScene" uid="uid://bh3d140ojbcxk" path="res://scenes/test/black_box.tscn" id="3_qlo3i"]
+
+[sub_resource type="Sky" id="Sky_5mrje"]
+sky_material = ExtResource("2_7rqhb")
+
+[sub_resource type="Environment" id="Environment_vm06g"]
+background_mode = 2
+sky = SubResource("Sky_5mrje")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="main" type="Node3D"]
+
+[node name="player" parent="." instance=ExtResource("1_7w07n")]
+transform = Transform3D(0.791636, 0, 0, 0, 0.791636, 0, 0, 0, 0.791636, 0, 1.25619, 0)
+JUMP_VELOCITY = 3.5
+WALKING_SPEED = 3.5
+CROUCHING_SPEED = 1.5
+SPRINTING_SPEED = 4.5
+
+[node name="env" type="Node3D" parent="."]
+
+[node name="environment" type="WorldEnvironment" parent="env"]
+environment = SubResource("Environment_vm06g")
+
+[node name="sun" type="DirectionalLight3D" parent="env"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="world" type="Node3D" parent="."]
+
+[node name="floor" type="Node3D" parent="world"]
+
+[node name="black_box" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, 5)
+
+[node name="black_box2" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, 5)
+
+[node name="black_box3" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, 3)
+
+[node name="black_box4" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, 3)
+
+[node name="black_box5" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, 5)
+
+[node name="black_box6" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, 3)
+
+[node name="black_box7" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, 5)
+
+[node name="black_box8" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, 3)
+
+[node name="black_box9" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, 1)
+
+[node name="black_box10" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, 1)
+
+[node name="black_box11" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, 1)
+
+[node name="black_box12" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, 1)
+
+[node name="black_box13" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, 7)
+
+[node name="black_box14" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, 7)
+
+[node name="black_box15" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, 7)
+
+[node name="black_box16" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, 7)
+
+[node name="black_box17" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, -3)
+
+[node name="black_box18" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, -3)
+
+[node name="black_box19" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, -5)
+
+[node name="black_box20" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, -5)
+
+[node name="black_box21" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, -3)
+
+[node name="black_box22" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, -5)
+
+[node name="black_box23" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, -3)
+
+[node name="black_box24" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, -5)
+
+[node name="black_box25" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, -7)
+
+[node name="black_box26" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, -7)
+
+[node name="black_box27" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, -7)
+
+[node name="black_box28" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, -7)
+
+[node name="black_box29" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, -1)
+
+[node name="black_box30" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.2, -1)
+
+[node name="black_box31" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, -1)
+
+[node name="black_box32" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.2, -1)
+
+[node name="black_box33" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, -3)
+
+[node name="black_box34" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, -3)
+
+[node name="black_box35" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, -5)
+
+[node name="black_box36" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, -5)
+
+[node name="black_box37" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, -3)
+
+[node name="black_box38" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, -5)
+
+[node name="black_box39" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, -3)
+
+[node name="black_box40" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, -5)
+
+[node name="black_box41" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, -7)
+
+[node name="black_box42" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, -7)
+
+[node name="black_box43" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, -7)
+
+[node name="black_box44" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, -7)
+
+[node name="black_box45" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, -1)
+
+[node name="black_box46" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, -1)
+
+[node name="black_box47" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, -1)
+
+[node name="black_box48" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, -1)
+
+[node name="black_box49" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, 5)
+
+[node name="black_box50" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, 5)
+
+[node name="black_box51" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, 3)
+
+[node name="black_box52" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, 3)
+
+[node name="black_box53" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, 5)
+
+[node name="black_box54" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, 3)
+
+[node name="black_box55" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 5)
+
+[node name="black_box56" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 3)
+
+[node name="black_box57" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, 1)
+
+[node name="black_box58" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, 1)
+
+[node name="black_box59" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, 1)
+
+[node name="black_box60" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 1)
+
+[node name="black_box61" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, 7)
+
+[node name="black_box62" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.2, 7)
+
+[node name="black_box63" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.2, 7)
+
+[node name="black_box64" parent="world/floor" instance=ExtResource("3_qlo3i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 7)
